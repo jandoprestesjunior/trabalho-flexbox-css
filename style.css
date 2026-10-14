@@ -1,0 +1,125 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --azul: #0b2a6f;
+  --azul-claro: #1e55d6;
+  --amarelo: #ffc93c;
+  --fundo: #f3f5f9;
+  --texto: #1b2433;
+}
+
+body {
+  font-family: "Archivo", Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+h1, h2, h3, .logo { font-family: "Archivo Black", "Arial Black", Arial, sans-serif; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 40px;
+  background: var(--azul);
+}
+.logo { color: white; font-size: 1.4rem; }
+.logo span { color: var(--amarelo); }
+
+nav { display: flex; gap: 24px; }
+nav a { color: white; text-decoration: none; font-weight: 600; }
+nav a:hover, nav a:focus-visible { color: var(--amarelo); outline: none; }
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 64px 40px;
+  background: var(--azul);
+  color: white;
+}
+.hero-texto { flex: 1 1 340px; max-width: 520px; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; margin-bottom: 16px; }
+.hero p { margin-bottom: 24px; color: #d6e0f5; }
+
+.botao {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--amarelo);
+  color: var(--azul);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.botao:hover, .botao:focus-visible { background: white; outline: none; }
+
+.hero-destaque {
+  flex: 0 1 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: var(--azul-claro);
+  border-radius: 12px;
+  text-align: center;
+}
+.hero-destaque strong { font-family: "Archivo Black", "Arial Black", sans-serif; font-size: 2.4rem; color: var(--amarelo); }
+
+section { padding: 56px 40px; }
+section > h2 { font-size: 1.8rem; margin-bottom: 28px; color: var(--azul); }
+
+.produtos { display: flex; flex-wrap: wrap; gap: 24px; }
+
+.card {
+  flex: 1 1 220px;          
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 24px;
+  background: white;
+  border: 2px solid #dde3ee;
+  border-radius: 10px;
+}
+.card h3 { font-size: 1.15rem; color: var(--azul); }
+.card .preco { font-size: 1.4rem; font-weight: 600; }
+.card button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: var(--azul);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.card button:hover, .card button:focus-visible { background: var(--azul-claro); outline: none; }
+
+.vantagens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  background: white;
+}
+.vantagem { flex: 1 1 200px; }
+.vantagem h3 { font-size: 1.05rem; margin-bottom: 6px; color: var(--azul); }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 24px 40px;
+  background: var(--azul);
+  color: #d6e0f5;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  header, .hero, section, footer { padding-left: 20px; padding-right: 20px; }
+}
